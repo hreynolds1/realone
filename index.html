@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Real One | Real Estate</title>
+    </head>
+    <body> <!--Body is a grid element-->
+        <link rel="stylesheet" href="style.css">
+        
+        <div id="navbar">
+            <img id="logoshort" src="./images/logoshort.png">
+            <img id="logo" src="./images/logo.png">
+            <a class="active" href="./index.html">Home</a>
+            <a href="./buy.html">Buy</a>
+            <a href="./sell.html">Sell</a>
+            <a href="./compare.html">Compare</a>
+            <a href="./contact.html">Contact Us</a>
+        </div>
+        <img id="showcase" src="./images/house1.jpg">
+        <img id="leftarrow" src="./images/buttonleft.png" onclick="changedisplay(-1)">
+        <img id="rightarrow" src="./images/buttonright.png" onclick="changedisplay(1)">
+        <div id="accolaides" class="infodivs">
+            <h2 id="accolaidestitle">Accolaides</h2>
+            <img src="./images/accolaides.PNG">
+            
+        </div>
+        <div id="reviews" class="infodivs">
+            <h2 id="reviewstitle">Reviews</h2>
+            <img src="./images/reviews.PNG">
+            
+        </div>
+        <div id="contact" class="infodivs">
+            <h2 id="contactstitle">Contact us</h2>
+            <img src="./images/contact.PNG">
+            
+        </div>
+        <script src="jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="realone.js"></script>
+    </body>
+</html>
