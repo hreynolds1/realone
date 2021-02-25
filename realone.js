@@ -5,15 +5,16 @@ function choice(li) {
     return li[randint(0,li.length-1)];
 }
 
-function findscrolled(element){//find if element is scrolled to or not, used for sliding in divs
+function findscrolled(element){//find if element is scrolled to or not, used to trigger slide-in divs
     doctop=$(window).scrollTop()
-    docbottom=doctop+$(window).height()
-
+    //docbottom=doctop+$(window).height()
+    docheight=$(window).outerHeight()
     elementtop=$(element).offset().top
-    elementbottom=elementtop+$(element).height()
-
+    //elementbottom=elementtop+$(element).height()
+    elementheight=$(element).outerHeight()
     //true if the top and the bottom of the element are in view
-    return ((elementbottom <= docbottom) && (elementtop>=doctop));
+    //return ((elementbottom <= docbottom) && (elementtop>=doctop));
+    return (doctop > (elementtop+elementheight-docheight))
 }
 
 
@@ -44,6 +45,7 @@ function changedisplay(num,ele=0){
                     document.getElementById("rightarrow").onclick=function() {changedisplay(1)}
                 }
             },1)
+            
         }
     },1)
 }
@@ -68,7 +70,7 @@ document.getElementById("showcase").addEventListener("mouseover",function(){
 document.getElementById("showcase").addEventListener("mouseout",function(){
     try{
         clearInterval(opacityincrease)
-    }catch{}
+    }catch(err){console.log(err)}
     autoslideshow=setInterval(function() {changedisplay(1)},7000)
     opacitydecrease=setInterval(function(){
         opacitynum-=0.1
@@ -81,5 +83,13 @@ document.getElementById("showcase").addEventListener("mouseout",function(){
 })
 
 $(window).scroll(function(){
-    //trigger animations when divs are scrolled to
+    if (findscrolled("#achievements")){
+        document.getElementById("achievements").classList.add("slideleft")
+    }
+    if (findscrolled("#reviews")){
+        document.getElementById("reviews").classList.add("slideright")
+    }
+    if (findscrolled("#contact")){
+        document.getElementById("contact").classList.add("slideleft")
+    }
 })
