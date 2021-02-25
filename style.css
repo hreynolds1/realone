@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: rgb(195,195,195);
+
 }
 ::-webkit-scrollbar{
     width: 0;
+    /*hide scrollbar but allow scrolling*/
 }
 
 #navbar{
@@ -43,13 +43,12 @@ body{
 }
 
 #showcase{
-    grid-column: 1/10;
-    grid-row: 2;
     align-self: center;
     height: 100vh;
     width: 100vw;
     margin: 0;
     float: bottom;
+    padding: 0;
 }
 
 #logo{
@@ -78,7 +77,7 @@ body{
     width: 105px;
     opacity: 1 !important;
 }
-#accolaides{
+#achievements{
     grid-row: 3;
 }
 #reviews{
@@ -88,20 +87,133 @@ body{
     grid-row: 5;
 }
 .infodivs{
-    background-color: rgb(40,40,40);
+    background-color: rgb(80,80,80);
     width: 100vw;
     height: 56vh;
     margin: 0;
     margin-bottom: 0.5vh;
-    margin-top: 0;
-    color: rgb(200,200,200)
-}
-.infodivs > *{
-    padding: 0.75vw;
+    color: rgb(200,200,200);
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    grid-template-rows: repeat(6,1fr)
 }
 .infodivs > img{
-    height: 13vh;
+    grid-column: 0/1;
+    grid-row: 1/7;
+    height: 100%;
 }
 .infodivs > h2{
+    grid-row: 0/0;
+    grid-column: 3/4;
     text-align: center;
+}
+.infodivs > p{
+    padding-left: 2vw;
+}
+#achievementtext,#reviewone,#address{
+    grid-column: 2/5;
+    grid-row: 2;
+    word-wrap: break-word;
+}
+#reviewtwo{
+    grid-column: 2/5;
+    grid-row: 3;
+}
+#phonenum{
+    grid-column: 2/5;
+    grid-row: 3;
+}
+#email{
+    grid-column: 2/5;
+    grid-row: 4;
+}
+#achievementlist{
+    grid-column: 2/5;
+    grid-row: 3;
+    list-style-type: none;
+}
+#achievementlist > li:before{
+    content: "- ";
+    /*dashed list rather than dotted*/
+}
+
+.REDACTED{
+    background-color: black;
+    color: black;
+    /*prevent highlighting*/
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Chrome, Edge, Opera and Firefox */
+}
+
+/*Div slide-in animations*/
+#achievements{
+    position: absolute;
+    left: -100vw;
+    visibility: hidden;
+}
+#reviews{
+    position: absolute;
+    right: -100vw;
+    top: 158vh;
+    visibility: hidden;
+}
+#contact{
+    position: absolute;
+    left: -100vw;
+    visibility: hidden;
+    top: 216vh;
+}
+.slideleft{
+    animation: slideinleft 0.8s forwards;
+    animation-delay: 0s;
+    visibility: visible !important;
+    margin: 0;
+}
+.slideright{
+    animation: slideinright 0.8s forwards;
+    animation-delay: 0s;
+    visibility: visible !important;
+    margin: 0;
+}
+
+@keyframes slideinleft{
+    0%{left: -100vw;}
+    10%{left: -62.99vw;}
+    20%{left: -39.68vw;}
+    30%{left: -25vw;}
+    40%{left: -15.74vw;}
+    50%{left: -9.92vw;}
+    60%{left: -6.25vw;}
+    70%{left: -3.93vw;}
+    80%{left: -2.48vw;}
+    90%{left: -1.56vw;}
+    100% {left: 0;}
+    /*follows the curve:
+    y=100*2^(-x/15)
+    Looks cooler having it slow down as it gets near */
+}
+
+@keyframes slideinright{
+    0%{right: -100vw;}
+    10%{right: -62.99vw;}
+    20%{right: -39.68vw;}
+    30%{right: -25vw;}
+    40%{right: -15.74vw;}
+    50%{right: -9.92vw;}
+    60%{right: -6.25vw;}
+    70%{right: -3.93vw;}
+    80%{right: -2.48vw;}
+    90%{right: -1.56vw;}
+    100% {right: 0;}
+    /*same thing as the left animation, but on the other side*/
+}
+#spacediv{
+    position: absolute;
+    opacity: 0;
+    width: 100vw;
+    height: 175vh;
 }
