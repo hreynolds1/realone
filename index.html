@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <meta charset="UTF-8">
     <head>
         <title>Real One | Real Estate</title>
     </head>
@@ -10,12 +11,21 @@
             <img id="logoshort" src="./images/logoshort.png">
             <img id="logo" src="./images/logo.png">
             <a class="active" href="./index.html">Home</a>
-            <a href="./buy.html">Buy</a>
-            <a href="./sell.html">Sell</a>
-            <a href="./compare.html">Compare</a>
-            <a href="./contact.html">Contact Us</a>
+            <a href="#">Buy</a>
+            <a href="#">Sell</a>
+            <a href="#">Compare</a>
+            <a href="#" id="contactus">Contact Us</a>
         </div>
         <img id="showcase" src="./images/house1.jpg">
+        <div id="propertysearch">
+            <h2>Real One Property Search</h2>
+            <select id="buysell">
+                <option value="Buy">Buy</option>
+                <option value="Sell">Sell</option>
+            </select>
+            <input type="text" placeholder="Search..." id="searchbar">
+            <button id="searchbutton" onclick="search()">Enter</button>
+        </div>
         <img id="leftarrow" src="./images/buttonleft.png" onclick="changedisplay(-1)">
         <img id="rightarrow" src="./images/buttonright.png" onclick="changedisplay(1)">
         <div id="spacediv"> <!--Placeholder so you can scroll down to info divs-->
@@ -42,10 +52,30 @@
 
         <div id="contact" class="infodivs">
             <img src="./images/contact.PNG">
-            <h2 id="contactstitle">Contact us</h2>
-            <p id="address">Address: 10 Downing St.</p>
-            <p id="phonenum">Phone: 605-475-6968</p>
-            <p id="email">Email: microsofttechsupport@notascam.com</p>
+            <h2>Property Listings</h2>
+            <div id="listings">
+                <p>We're selling houses now! Come look at some of our newer listings!</p>
+                <a src="#">180 Grenwich St.</a>
+                <p>$1,100,000</p>
+                <a src="#">5 Adelaide Ave</a>
+                <p>$300,000</p>
+            </div>
+
+        </div>
+        <div id="footer">
+            <h1 id="footercontact">Contact us</h1>
+            <p id="address"><span style="font-size:20px;">⌂</span> 10 Downing St.</p>
+            <p id="phonenum">☎ 605-475-6968</p i>
+            <p id="email">✉ microsofttechsupport@notascam.com</p>
+            <h1 id="legal">Legal</h1>
+            <p id="copyright">Real One &#169 2021</p>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" id="privacy">Privacy policy</a>
+            <a href="https://www.youtube.com/watch?v=fC7oUOUEEi4" target="_blank" id="disclaimer">Disclaimer</a>
+            <h1 id="links">Links</h1>
+            <a href="#" id="buy">Buy</a>
+            <a href="#" id="sell">Sell</a>
+            <a href="#" id="compare">Compare</a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" id="top" target="_blank">Back to top</a>
         </div>
         <script src="jquery-3.5.1.min.js"></script>
         <script type="text/javascript" src="realone.js"></script>
