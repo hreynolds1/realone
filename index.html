@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
+    
     <head>
+        <meta charset="UTF-8">
         <title>Real One | Real Estate</title>
     </head>
     <body> <!--Body is a grid element-->
         <link rel="stylesheet" href="style.css">
         
         <div id="navbar">
-            <img id="logoshort" src="./images/logoshort.png">
-            <img id="logo" src="./images/logo.png">
-            <a class="active" href="./index.html">Home</a>
-            <a href="#">Buy</a>
+            <img id="logoshort" src="./images/logoshort.png" alt="Real One Logo">
+            <img id="logo" src="./images/logo.png" alt="Real One">
+            <a class="active" href="">Home</a>
+            <a href="#">Buy</a> 
             <a href="#">Sell</a>
             <a href="#">Compare</a>
             <a href="#" id="contactus">Contact Us</a>
+            <!--Change href values to respective page URLs-->
         </div>
-        <img id="showcase" src="./images/house1.jpg">
+        <img id="showcase" src="./images/house1.jpg" alt="Property showcase">
         <div id="propertysearch">
             <h2>Real One Property Search</h2>
             <select id="buysell">
@@ -26,13 +28,11 @@
             <input type="text" placeholder="Search..." id="searchbar">
             <button id="searchbutton" onclick="search()">Enter</button>
         </div>
-        <img id="leftarrow" src="./images/buttonleft.png" onclick="changedisplay(-1)">
-        <img id="rightarrow" src="./images/buttonright.png" onclick="changedisplay(1)">
-        <div id="spacediv"> <!--Placeholder so you can scroll down to info divs-->
-
-        </div>
+        <img id="leftarrow" src="./images/buttonleft.png" onclick="changedisplay(-1)" alt="Go back">
+        <img id="rightarrow" src="./images/buttonright.png" onclick="changedisplay(1)" alt="Go back">
+        <div id="spacediv"> <!--Spacing so other divs can be scrolled to--></div>
         <div id="achievements" class="infodivs">
-            <img src="./images/accolaides.PNG">
+            <img src="./images/accolaides.PNG" alt="White wooden house sold by Real One">
             <h2>Achievements</h2>
             <p id="achievementtext">Here at Real One, we hold our professionals to the highest standards, leading to the best possible results. Here are some of our most notable achievements</p>
             <ul id="achievementlist">
@@ -44,14 +44,14 @@
         </div>
 
         <div id="reviews" class="infodivs">
-            <img src="./images/reviews.PNG">
+            <img src="./images/reviews.PNG" alt="Satsified male and female customer">
             <h2 id="reviewstitle">Customer Reviews</h2>
             <p id="reviewone">"Highly professional, these guys made moving into the White House way easier. Would be a perfect score, but there's a few holes in the timber. 9.5/10" - Patrick Richardson</p>
             <p id="reviewtwo">"Real One is an absolutely <span class="REDACTED">useless real estate company who should be ashamed to call themselves a</span> professional business. They promised to sell my house for $800,000 and <span class="REDACTED">instead claimed they missed a decimal point and sold it for $8,000. They deserve to have a pipe bomb</span> delivered <span class="REDACTED">to their mailbox.</span> I am <span class="REDACTED">homeless and</span> extremely <span class="REDACTED">far from</span> happy." - John [REDACTED]</p>
         </div>
 
         <div id="contact" class="infodivs">
-            <img src="./images/contact.PNG">
+            <img src="./images/contact.PNG" alt="Brown house sold by Real One">
             <h2>Property Listings</h2>
             <div id="listings">
                 <p>We're selling houses now! Come look at some of our newer listings!</p>
@@ -60,24 +60,27 @@
                 <a href="#">5 Adelaide Ave</a>
                 <p>$300,000</p>
             </div>
-
         </div>
+
         <div id="footer">
             <h1 id="footercontact">Contact us</h1>
             <p id="address"><span style="font-size:20px;">⌂</span> 10 Downing St.</p>
-            <p id="phonenum">☎ 605-475-6968</p i>
+            <p id="phonenum">☎ 605-475-6968</p>
             <p id="email">✉ microsofttechsupport@notascam.com</p>
             <h1 id="legal">Legal</h1>
-            <p id="copyright">Real One &#169 2021</p>
+            <p id="copyright">Real One &#169; 2021</p>
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" id="privacy">Privacy policy</a>
             <a href="https://www.youtube.com/watch?v=fC7oUOUEEi4" target="_blank" id="disclaimer">Disclaimer</a>
+            <!--Placeholder links, replace later-->
             <h1 id="links">Links</h1>
             <a href="#" id="buy">Buy</a>
             <a href="#" id="sell">Sell</a>
             <a href="#" id="compare">Compare</a>
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" id="top" target="_blank">Back to top</a>
+            <!--Placeholder links-->
         </div>
+
         <script src="jquery-3.5.1.min.js"></script>
-        <script type="text/javascript" src="realone.js"></script>
+        <script src="realone.js"></script>
     </body>
 </html>
